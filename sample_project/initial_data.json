@@ -1,0 +1,469 @@
+[
+  {
+    "pk": 1,
+    "model": "humans.humangroup",
+    "fields": {
+      "display_order": 1,
+      "label": "Technical",
+      "modified": "2012-08-17T01:18:29.605Z",
+      "created": "2012-08-17T00:16:55.850Z"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "humans.humangroup",
+    "fields": {
+      "display_order": 2,
+      "label": "Editorial",
+      "modified": "2012-08-17T01:18:43.330Z",
+      "created": "2012-08-17T01:18:43.330Z"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "humans.handletype",
+    "fields": {
+      "type": "Twitter",
+      "modified": "2012-08-17T00:18:18.946Z",
+      "template": "Twitter: @{{ handle }}",
+      "created": "2012-08-17T00:15:28.634Z"
+    }
+  },
+  {
+    "pk": 1,
+    "model": "humans.handletype",
+    "fields": {
+      "type": "Email",
+      "modified": "2012-08-17T00:57:12.406Z",
+      "template": "Contact: {{ handle }}",
+      "created": "2012-08-17T00:14:59.397Z"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "humans.handletype",
+    "fields": {
+      "type": "Github",
+      "modified": "2012-08-17T01:16:37.805Z",
+      "template": "Github: https://github.com/{{ handle }}/",
+      "created": "2012-08-17T01:16:37.805Z"
+    }
+  },
+  {
+    "pk": 1,
+    "model": "humans.handle",
+    "fields": {
+      "handle": "jnovinger@gmail.com",
+      "type": 1,
+      "modified": "2012-08-17T00:15:07.188Z",
+      "created": "2012-08-17T00:15:07.187Z"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "humans.handle",
+    "fields": {
+      "handle": "jasonnovinger",
+      "type": 2,
+      "modified": "2012-08-17T00:15:35.122Z",
+      "created": "2012-08-17T00:15:35.122Z"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "humans.handle",
+    "fields": {
+      "handle": "jnovinger",
+      "type": 3,
+      "modified": "2012-08-17T01:16:42.458Z",
+      "created": "2012-08-17T01:16:42.458Z"
+    }
+  },
+  {
+    "pk": 1,
+    "model": "humans.snippet",
+    "fields": {
+      "text": "................;;::::;;;;;;;;;;;,..',,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,\r\n............',;;;;::::;;;;;  _   _  ___ _____   ____  _   _ ____  _____   ___ _____   _     ___  ____ _____  ,,'.,,,,,,,,,,,,,,,,,,,'...\r\n.........';;;;;;;;::;;;;;;' | \\ | |/ _ \\_   _| / ___|| | | |  _ \\| ____| |_ _|  ___| | |   / _ \\/ ___|_   _| ,,,'.,,,,,,,,,,,,'.......''\r\n.....';;;;;;;;;;;;;;;,''''' |  \\| | | | || |   \\___ \\| | | | |_) |  _|    | || |_    | |  | | | \\___ \\ | |   ,,,,'.,,,,,'.......'''',,,,\r\n.',;;;;;;::;:;;;;,'''',,,,, | |\\  | |_| || |    ___) | |_| |  _ <| |___   | ||  _|   | |__| |_| |___) || |   ,,,,,........''''',,,,,,,,,\r\n;;;;;;;;;;;;;,'''',,,,,,,,, |_| \\_|\\___/ |_|   |____/ \\___/|_| \\_\\_____| |___|_|     |_____\\___/|____/ |_|   .......''''',,,,,,,,,,,,,,,\r\n;;;;;;;;;,'''',,,,,,,,,,,,,                                                                                  .'''''',,,,,,,,,,,,,,,,,,,,\r\n;;;;;,'''',,,,,,,,,,,,,,,,,,,,'..',,'.,,,'.......',,,,,,,,,,,,,,,.looooc'',,.:ool,',,,,,,,,,,,,,'.......'''''',,,,,,,,,,,,,,,,,,,,,,,'''\r\n;,'''',,,,,,,,,,,,,,,,,,,,,,,,....',,,.',,'.......,,,,,,,,,,,,,,,',oooooo:',,.loooc,',,,,,''......'''''''',,,,,,,,,,,,,,,,,,,,,''''''...\r\n'',,,,,,,,,,,,,,,,,,,,,,,,,,,,......,,,.',,'......'''',,,'''''',,,.looooool,'',ooooo:.......''''',,,,,,,,,,,,,,,,,,,,,,,,'''''.....'',,;\r\n,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.......,,,'',,,..';cloooooooollc:;;,.:oooooooo;''ooooooc.'''',,,,,,,,,,,,,,,,,,,,,,,''''''....'',,;;;;;;;;\r\n,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.......,,,'.'';loooooooooooooooooooooooooooooo::ooooooo:.'',,,,,,,,,,,,,''',,,''''....''',;;;;;;;;;;;;;;;\r\n,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,'.......,,,.;loooooooooooooooooooooooooooooooooooooooooo''',,,,,,,,,,,'''''....''',;;;;;;;;;;;;;;;;;;;;;;\r\n,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,'cc:,.'',looooooooooooooooooooooooooooooooooooooooooool.'',,'''''....'''',;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.coooolooooooooooooooooooooooooooooooooooooooooooooooo''''...''',,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,'.;oooooooooooooooooooooooooooooooooooooooooooooooooooo'.'',;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,',;:looooooooooooool;cooolllcc:clooooooooooooooooooooooool';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n,,,,,,,,,,,,,,,,,,,,,,,,,,,'.;looooooooooooooooooolclk000000Okddoollccccloooooooooooool,,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n,,,,,,,,,,,,,,,,,,,,,,,,,,,,...,;cloooooooooooolllool:lO00000000000000Oxdoollcccccccc;,,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n,,,,,,,,,,,,,,,,,,,,,,'......''''..,oooooooooooc,colcc::O00000000000000000000000kc.',;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n,,,,,,,,,,,,,,,,'......''''''',''''looooooooooooocck0Oxlx000000000000000000000000Oc,,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n,,,,,,,,,,'.......''''''',,,,''''.loooooooooooooool:x000000000000000000000000000000Ol';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n,,,,'.......''''''',,,,,,,,'''''',oooooooooooooooooo:o000000000000000000OdO000000000d:,,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n......'''''',,,,,,,,,,,,'''''....:ooooooooooooooooooo:o000000000000000000Ooo0000000000Oo,,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n''''''',,,,,,,,,,''''''...''',,;.coooooooooooooooooooo:x00Od0000000OOOOOOOOdl0Oxdddxdlddc.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n,,,,,,,,,,''''''....''',;;;;;;;;.:ooooooooooooooooooool;O0k:kddxkkxd.'dodxkk,xkxkkkkd.okd.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n,,,,,''''....''',;;;;;;;;;;;;;;;;'loooooooooooooooooooo:o0O;ldkxxddddxxxxddd,:odxkO000OOo.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n'''...''',,;;;;;;;;;;;;;;;;;;;;;;,'cooooooooooolcccclooo:00x;O0000000000000ookoox000000x,,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n''',;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,,coooooooccdOO0Oo:lo:000kk000000000000Ok0000ddddddl'';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,,;coool:Odl;oodk:l:0000000000000000000000000000000k;';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,,,;,:0kdl00k0Oco00000000000000000000000000000000l.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'o00oodO0000000000000000000000000000Okddddd:,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,:oO00OO000000000000000000000000000OxkOO00o';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,,;,oO00000000000000000000000000000000000x;,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,:00000000000000000000000000000000000000o,,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'l00000000000000000000000000000000000000Ol,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,;000000000000000000000000000000000000000O,,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,0000000000000000000kdddddddddc:cc:::;;;,,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,''0000000000000000000000000000x:';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'..,'O000000000000000000000000kc;,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'.,'',00000000000000000000000x:,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;.',,,.c0000000000000000000000l.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,.',,,,.d000000000000000000000c''.,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,''..,,,,,';00000000000000000000c',,,.';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n;;;;   ___  ____    _     ___   ___  _  _____ _   _  ____   _____ ___  ____    _                                      _        _    ;;;;\r\n;;;;  / _ \\|  _ \\  | |   / _ \\ / _ \\| |/ /_ _| \\ | |/ ___| |  ___/ _ \\|  _ \\  | |__  _   _ _ __ ___   __ _ _ __  ___ | |___  _| |_  ;;;;\r\n;;;; | | | | |_) | | |  | | | | | | | ' / | ||  \\| | |  _  | |_ | | | | |_) | | '_ \\| | | | '_ ` _ \\ / _` | '_ \\/ __|| __\\ \\/ / __| ;;;;\r\n;;;; | |_| |  _ <  | |__| |_| | |_| | . \\ | || |\\  | |_| | |  _|| |_| |  _ <  | | | | |_| | | | | | | (_| | | | \\__ \\| |_ >  <| |_  ;;;;\r\n;;;;  \\___/|_| \\_\\ |_____\\___/ \\___/|_|\\_\\___|_| \\_|\\____| |_|   \\___/|_| \\_\\ |_| |_|\\__,_|_| |_| |_|\\__,_|_| |_|___(_)__/_/\\_\\\\__| ;;;;\r\n;;;;                                                                                                                                ;;;;\r\n;;;;;;;;;;;;;;;;;;;;;;;;;;'.,,,,,,,,,,,,,,,,,.,,,,,,,,,,,,,NWWWWWWWWWWWWWWWW;',,,,,,.',,..;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;:,;:,;;;;",
+      "display_order": 1,
+      "title": "Not sure if lost",
+      "modified": "2012-08-17T00:07:45.974Z",
+      "created": "2012-08-16T23:51:24.371Z"
+    }
+  },
+  {
+    "pk": 19,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_logentry",
+      "name": "Can add log entry",
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 20,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_logentry",
+      "name": "Can change log entry",
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 21,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_logentry",
+      "name": "Can delete log entry",
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 1,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_group",
+      "name": "Can add group",
+      "content_type": 2
+    }
+  },
+  {
+    "pk": 4,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_group",
+      "name": "Can change group",
+      "content_type": 2
+    }
+  },
+  {
+    "pk": 7,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_group",
+      "name": "Can delete group",
+      "content_type": 2
+    }
+  },
+  {
+    "pk": 2,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_permission",
+      "name": "Can add permission",
+      "content_type": 1
+    }
+  },
+  {
+    "pk": 5,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_permission",
+      "name": "Can change permission",
+      "content_type": 1
+    }
+  },
+  {
+    "pk": 8,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_permission",
+      "name": "Can delete permission",
+      "content_type": 1
+    }
+  },
+  {
+    "pk": 3,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_user",
+      "name": "Can add user",
+      "content_type": 3
+    }
+  },
+  {
+    "pk": 6,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_user",
+      "name": "Can change user",
+      "content_type": 3
+    }
+  },
+  {
+    "pk": 9,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_user",
+      "name": "Can delete user",
+      "content_type": 3
+    }
+  },
+  {
+    "pk": 10,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_contenttype",
+      "name": "Can add content type",
+      "content_type": 4
+    }
+  },
+  {
+    "pk": 11,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_contenttype",
+      "name": "Can change content type",
+      "content_type": 4
+    }
+  },
+  {
+    "pk": 12,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_contenttype",
+      "name": "Can delete content type",
+      "content_type": 4
+    }
+  },
+  {
+    "pk": 31,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_humangroup",
+      "name": "Can add human group",
+      "content_type": 10
+    }
+  },
+  {
+    "pk": 36,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_humangroup",
+      "name": "Can change human group",
+      "content_type": 10
+    }
+  },
+  {
+    "pk": 41,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_humangroup",
+      "name": "Can delete human group",
+      "content_type": 10
+    }
+  },
+  {
+    "pk": 23,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_userprofile",
+      "name": "Can add user profile",
+      "content_type": 9
+    }
+  },
+  {
+    "pk": 25,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_userprofile",
+      "name": "Can change user profile",
+      "content_type": 9
+    }
+  },
+  {
+    "pk": 27,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_userprofile",
+      "name": "Can delete user profile",
+      "content_type": 9
+    }
+  },
+  {
+    "pk": 29,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_handletype",
+      "name": "Can add handle type",
+      "content_type": 11
+    }
+  },
+  {
+    "pk": 34,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_handletype",
+      "name": "Can change handle type",
+      "content_type": 11
+    }
+  },
+  {
+    "pk": 39,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_handletype",
+      "name": "Can delete handle type",
+      "content_type": 11
+    }
+  },
+  {
+    "pk": 22,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_article",
+      "name": "Can add article",
+      "content_type": 8
+    }
+  },
+  {
+    "pk": 24,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_article",
+      "name": "Can change article",
+      "content_type": 8
+    }
+  },
+  {
+    "pk": 26,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_article",
+      "name": "Can delete article",
+      "content_type": 8
+    }
+  },
+  {
+    "pk": 28,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_handle",
+      "name": "Can add handle",
+      "content_type": 12
+    }
+  },
+  {
+    "pk": 33,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_handle",
+      "name": "Can change handle",
+      "content_type": 12
+    }
+  },
+  {
+    "pk": 38,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_handle",
+      "name": "Can delete handle",
+      "content_type": 12
+    }
+  },
+  {
+    "pk": 13,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_session",
+      "name": "Can add session",
+      "content_type": 5
+    }
+  },
+  {
+    "pk": 14,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_session",
+      "name": "Can change session",
+      "content_type": 5
+    }
+  },
+  {
+    "pk": 15,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_session",
+      "name": "Can delete session",
+      "content_type": 5
+    }
+  },
+  {
+    "pk": 16,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_site",
+      "name": "Can add site",
+      "content_type": 6
+    }
+  },
+  {
+    "pk": 17,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_site",
+      "name": "Can change site",
+      "content_type": 6
+    }
+  },
+  {
+    "pk": 18,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_site",
+      "name": "Can delete site",
+      "content_type": 6
+    }
+  },
+  {
+    "pk": 1,
+    "model": "auth.user",
+    "fields": {
+      "username": "jason",
+      "first_name": "Jason",
+      "last_name": "Novinger",
+      "is_active": true,
+      "is_superuser": true,
+      "is_staff": true,
+      "last_login": "2012-08-17T02:34:56.316Z",
+      "groups": [],
+      "user_permissions": [],
+      "password": "pbkdf2_sha256$10000$eC2AYjU9WqqK$AlIlMzf5NSvJv6tvin3Og+Wsy0fGOtyx+eSG0NJZIAk=",
+      "email": "jnovinger@gmail.com",
+      "date_joined": "2012-08-14T03:06:03Z"
+    }
+  },
+  {
+    "pk": 1,
+    "model": "humans.human",
+    "fields": {
+      "group": 1,
+      "name": "",
+      "created": "2012-08-17T00:17:02.053Z",
+      "display_order": 4,
+      "modified": "2012-08-17T01:16:45.083Z",
+      "handles": [
+        1,
+        2,
+        6
+      ],
+      "role": "Web Developer",
+      "location": "",
+      "user": 1
+    }
+  },
+  {
+    "pk": 5,
+    "model": "humans.human",
+    "fields": {
+      "group": 2,
+      "name": "The Big Boss",
+      "created": "2012-08-17T01:25:05.109Z",
+      "display_order": 5,
+      "modified": "2012-08-17T02:35:43.297Z",
+      "handles": [],
+      "role": "CEO, Editor-in-Chief",
+      "location": "",
+      "user": null
+    }
+  }
+]
