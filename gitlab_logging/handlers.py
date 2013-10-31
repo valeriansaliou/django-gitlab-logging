@@ -10,11 +10,22 @@ class GitlabIssuesHandler(logging.Handler):
         logging.Handler.__init__(self)
 
 
-    def __open_issue(self, title, content):
+    def __open_issue(self, title, content, trace_raw):
         """
         Open an issue on GitLab with given content
         """
-        task_log_gitlab_report.delay(title, content)
+        from tasks import task_log_gitlab_issue_open
+
+        task_log_gitlab_issue_open.delay(title, content, trace_raw)
+
+
+    def __reopen_issue(self, iid):
+        """
+        Re-open a given issue on GitLab
+        """
+        from tasks import task_log_gitlab_issue_reopen
+
+        task_log_gitlab_issue_reopen.delay(iid)
 
 
     def emit(self, record):
@@ -22,7 +33,7 @@ class GitlabIssuesHandler(logging.Handler):
         Fired when an error is emitted
         """
         from django.conf import settings
-        from _commons.tasks import task_log_gitlab_report
+        from helpers import GitlabIssuesHelper
 
         try:
             has_repr, request_repr = True, '\n{0}'.format(
@@ -35,20 +46,27 @@ class GitlabIssuesHandler(logging.Handler):
         title = '[{level}@{environment}] {message}'.format(
             level=record.levelname,
             message=record.getMessage(),
-            environment=settings.ENVIRONMENT,
+            environment=getattr(settings, 'ENVIRONMENT', 'default'),
         )
 
         # Generate issue content
+        trace_raw = self.format(record)
         contents = {
             'head': '#### :zap: Note: this issue has been automatically opened.',
-            'trace': '```python\n%s\n```' % self.format(record),
+            'trace': '```python\n%s\n```' % trace_raw,
             'repr': '```\n%s\n```' % request_repr if has_repr\
                                                       else ('*%s*' % request_repr),
         }
-        content = '{head}\n\n---\n\n{trace}\n\n---\n\n{repr}'.format(
-            head=contents['head'],
-            trace=contents['trace'],
-            repr=contents['repr'],
-        )
 
-        self.__open_issue(title, content)
+        issue_exists, issue_iid = GitlabIssuesHelper.check_issue(trace_raw)
+
+        if not issue_exists:
+            content = '{head}\n\n---\n\n{trace}\n\n---\n\n{repr}'.format(
+                head=contents['head'],
+                trace=contents['trace'],
+                repr=contents['repr'],
+            )
+
+            self.__open_issue(title, content, trace_raw)
+        elif issue_iid:
+            self.__reopen_issue(issue_iid)
