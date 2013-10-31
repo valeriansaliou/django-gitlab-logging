@@ -5,7 +5,7 @@ from setuptools import find_packages
 
 setup(
     name='django-gitlab-logging',
-    version='0.1.5',
+    version='0.1.6',
     author=u'Valérian Saliou',
     author_email='valerian@valeriansaliou.name',
     packages=find_packages(),
