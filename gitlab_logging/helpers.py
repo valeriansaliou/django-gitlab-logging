@@ -8,7 +8,7 @@ class GitlabIssuesHelper(object):
     """
 
     @staticmethod
-    def store_issue(trace, iid):
+    def store_issue(trace, project_id, issue_id):
         """
         Store new issue in database (avoids from opening it multiple times on GitLab-side)
         """
@@ -18,27 +18,28 @@ class GitlabIssuesHelper(object):
 
         history = History(
             checksum=checksum,
-            iid=iid,
+            project_id=project_id,
+            issue_id=issue_id,
         ).save()
 
 
     @staticmethod
-    def check_issue(trace):
+    def check_issue(project_id, trace):
         """
         Check whether the issue is new (not in GitLab database) or not
         """
         from models import History
 
-        exists, iid = False, None
+        exists, issue_id = False, None
         checksum = hashlib.sha1(trace).hexdigest()
 
         try:
-            history = History.objects.get(checksum=checksum)
-            exists, iid = True, history.iid
+            history = History.objects.get(project_id=project_id, checksum=checksum)
+            exists, issue_id = True, history.issue_id
         except History.DoesNotExist:
             pass
 
-        return exists, iid
+        return exists, issue_id
 
 
     @staticmethod

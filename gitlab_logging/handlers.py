@@ -19,13 +19,13 @@ class GitlabIssuesHandler(logging.Handler):
         task_log_gitlab_issue_open.delay(title, content, trace_raw)
 
 
-    def __reopen_issue(self, iid):
+    def __reopen_issue(self, issue_id):
         """
         Re-open a given issue on GitLab
         """
         from tasks import task_log_gitlab_issue_reopen
 
-        task_log_gitlab_issue_reopen.delay(iid)
+        task_log_gitlab_issue_reopen.delay(issue_id)
 
 
     def emit(self, record):
@@ -58,7 +58,7 @@ class GitlabIssuesHandler(logging.Handler):
                                                       else ('*%s*' % request_repr),
         }
 
-        issue_exists, issue_iid = GitlabIssuesHelper.check_issue(trace_raw)
+        issue_exists, issue_id = GitlabIssuesHelper.check_issue(settings.GITLAB_PROJECT_ID, trace_raw)
 
         if not issue_exists:
             content = '{head}\n\n---\n\n{trace}\n\n---\n\n{repr}'.format(
@@ -68,5 +68,5 @@ class GitlabIssuesHandler(logging.Handler):
             )
 
             self.__open_issue(title, content, trace_raw)
-        elif issue_iid:
-            self.__reopen_issue(issue_iid)
+        elif issue_id:
+            self.__reopen_issue(issue_id)

@@ -24,12 +24,12 @@ def task_log_gitlab_issue_open(issue_title, issue_content, trace_raw):
     )
 
     if success:
-        iid = response.get('iid', None)
+        issue_id = response.get('id', None)
 
-        if iid is not None:
-            print "Issue opened: %s [IID: %s]" % (issue_title, iid)
+        if issue_id is not None:
+            print "Issue opened: %s [ID: %s]" % (issue_title, issue_id)
 
-            GitlabIssuesHelper.store_issue(trace_raw, response['iid'])
+            GitlabIssuesHelper.store_issue(trace_raw, settings.GITLAB_PROJECT_ID, response['id'])
     else:
         print "Issue could not be opened: %s" % issue_title
 
@@ -39,7 +39,7 @@ def task_log_gitlab_issue_reopen(issue_id):
     """
     Proceed the issue re-opening task
     """
-    print "Re-opening issue [IID: %s]" % issue_id
+    print "Re-opening issue [ID: %s]" % issue_id
 
     success, _ = GitlabIssuesHelper.gitlab().editissue(
         settings.GITLAB_PROJECT_ID,
@@ -49,6 +49,6 @@ def task_log_gitlab_issue_reopen(issue_id):
     )
 
     if success:
-        print "Issue re-opened [IID: %s]" % issue_id
+        print "Issue re-opened [ID: %s]" % issue_id
     else:
-        print "Issue could not be re-opened [IID: %s]" % issue_id
+        print "Issue could not be re-opened [ID: %s]" % issue_id
