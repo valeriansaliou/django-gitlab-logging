@@ -1,4 +1,4 @@
-django-gitlab-logging
+Django GitLab Logging
 =====================
 
 Django GitLab Logging is a custom log handler that has been written with the purpose of auto-opening (and assigning) issues on GitLab everytime something goes south with backend code.
@@ -53,8 +53,10 @@ LOGGING['loggers'] = {
 }
 ```
 
-* You're done! :happy:
+* You're done! :v:
 
-## Important Notes
+## Notes
 
 * This module is kept up-to-date with latest GitLab API changes. Thus, ensure you're running the latest GitLab version in time when using Django GitLab Logging!
+
+* Django GitLab Logging has been built by the happy folks at [Waaave Network](https://waaave.com/), for their website needs.
