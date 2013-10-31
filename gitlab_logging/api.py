@@ -47,7 +47,7 @@ class Gitlab(object):
         :param sudo: do the request as another user
         :return: true if success
         """
-        data = {"id": id, "title": title, "description": description,
+        data = {"id": id_, "title": title, "description": description,
                 "assignee_id": assignee_id,
                 "milestone_id": milestone_id, "labels": labels}
         if sudo != "":
@@ -77,7 +77,7 @@ class Gitlab(object):
         :param sudo: do the request as another user
         :return: true if success
         """
-        data = {"id": id, "issue_id": issue_id, "title": title,
+        data = {"id": id_, "issue_id": issue_id, "title": title,
                 "description": description, "assignee_id": assignee_id,
                 "milestone_id": milestone_id, "labels": labels,
                 "state_event": state_event}
