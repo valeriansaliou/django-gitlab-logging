@@ -19,7 +19,7 @@ def task_log_gitlab_issue_open(issue_title, issue_content, trace_raw):
         issue_title,
 
         description=issue_content,
-        assignee_id=getattr(settings, 'GITLAB_PROJECT_ASSIGNEE_ID', ''),
+        assignee_id=getattr(settings, 'GITLAB_ASSIGNEE_ID', ''),
         labels='backend, error, bug',
     )
 
