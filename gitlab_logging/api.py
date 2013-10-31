@@ -54,11 +54,12 @@ class Gitlab(object):
             data['sudo'] = sudo
         request = requests.post(self.projects_url + "/" + str(id_) + "/issues",
                                 headers=self.headers, data=data)
+        response = json.loads(request)
         if request.status_code == 201:
-            return True, request.text
+            return True, response
         else:
             
-            return False, request.text
+            return False, response
 
     def editissue(self, id_, issue_id, title="", description="",
                   assignee_id="", milestone_id="", labels="",
@@ -85,8 +86,9 @@ class Gitlab(object):
         request = requests.put(self.projects_url + "/" + str(id_) + "/issues/" +
                                str(issue_id), headers=self.headers,
                                data=data)
+        response = json.loads(request)
         if request.status_code == 201:
-            return True, request.text
+            return True, response
         else:
             
-            return False, request.text
+            return False, response

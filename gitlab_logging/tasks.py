@@ -1,5 +1,3 @@
-import json
-
 from celery import task
 from django.conf import settings
 
@@ -25,8 +23,7 @@ def task_log_gitlab_issue_open(issue_title, issue_content, trace_raw):
         labels='backend, error, bug',
     )
 
-    if success and response:
-        response = json.loads(response)
+    if success:
         iid = response.get('iid', None)
 
         if iid is not None:
