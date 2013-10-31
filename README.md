@@ -9,24 +9,24 @@ Django GitLab Logging is smart enough to recognize similar errors, thus not open
 
 ## Configuration
 
-1. Add `gitlab_logging` to your INSTALLED_APPS.
+* Add `gitlab_logging` to your INSTALLED_APPS.
 
-2. Drop **those lines of configuration in your settings.py**, taking care of filling everything:
+* Drop **those lines of configuration in your settings.py**, taking care of filling everything:
 
 ```python
 # GitLab options
 GITLAB_HOST = 'https://gitlab.server.tld'  # Beware: no trailing slash there!
 GITLAB_USER = 'gitlab.user'
-GITLAB_TOKEN = 'USER_GITLAB_TOKEN'
-GITLAB_PROJECT_ID = 114                    # Grep the project ID from the DB
-GITLAB_ASSIGNEE_ID = 2                     # Grep the assignee ID from the DB (optional, you can leave drop this parameter)
+GITLAB_TOKEN = 'USER_GITLAB_TOKEN'         # Get this from GitLab user account information
+GITLAB_PROJECT_ID = 114                    # Get the project ID from the DB
+GITLAB_ASSIGNEE_ID = 2                     # Get the assignee ID from the DB (optional, you can drop this parameter)
 ```
 
-3. Then, **ensure you have Celery installed with Django**. Django GitLab Logging cannot work without a tasker (here, Celery), since GitLab API calls needs to be done asynchronously to avoid blocking your Web workers in case of network delays or GitLab remote server downtimes.
+* Then, **ensure you have Celery installed with Django**. Django GitLab Logging cannot work without a tasker (here, Celery), since GitLab API calls needs to be done asynchronously to avoid blocking your Web workers in case of network delays or GitLab remote server downtimes.
 
-4. **Proceed either** a `syncdb` or a `migrate` (depending on if you're using South or not)
+* **Proceed either** a `syncdb` or a `migrate` (depending on if you're using South or not)
 
-5. **Map the custom GitLab Logging handler**:
+* **Map the custom GitLab Logging handler**:
 
 ```python
 'handlers': {
@@ -39,7 +39,7 @@ GITLAB_ASSIGNEE_ID = 2                     # Grep the assignee ID from the DB (o
 },
 ```
 
-6. **Activate your GitLab logging handler** where you need it:
+* **Activate your GitLab logging handler** where you need it:
 
 ```python
 LOGGING['loggers'] = {
@@ -53,7 +53,7 @@ LOGGING['loggers'] = {
 }
 ```
 
-7. You're done!
+* You're done! :happy:
 
 ## Important Notes
 
