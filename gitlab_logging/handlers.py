@@ -33,6 +33,7 @@ class GitlabIssuesHandler(logging.Handler):
         Fired when an error is emitted
         """
         from django.conf import settings
+        from django.views.debug import get_exception_reporter_filter
         from helpers import GitlabIssuesHelper
 
         try:
