@@ -8,30 +8,44 @@ class GitlabIssuesHelper(object):
     """
 
     @staticmethod
-    def store_issue(trace, project_id, issue_id):
+    def __trace_checksum(trace):
+        """
+        Process the trace checksum
+        """
+        return hashlib.sha1(trace).hexdigest()
+
+
+    @classmethod
+    def store_issue(_class, trace, project_id, issue_id):
         """
         Store new issue in database (avoids from opening it multiple times on GitLab-side)
         """
         from models import History
 
-        checksum = hashlib.sha1(trace).hexdigest()
+        history, created = History.objects.get_or_create(
+            checksum=_class.__trace_checksum(trace),
+            defaults={
+                'project_id': project_id,
+                'issue_id': issue_id,
+            },
+        )
 
-        history = History(
-            checksum=checksum,
-            project_id=project_id,
-            issue_id=issue_id,
-        ).save()
+        # Ensure data consistency (in case project ID changes)
+        if not created:
+            history.project_id = project_id
+            history.issue_id = issue_id
+            history.save()
 
 
-    @staticmethod
-    def check_issue(project_id, trace):
+    @classmethod
+    def check_issue(_class, project_id, trace):
         """
         Check whether the issue is new (not in GitLab database) or not
         """
         from models import History
 
         exists, issue_id = False, None
-        checksum = hashlib.sha1(trace).hexdigest()
+        checksum = _class.__trace_checksum(trace)
 
         try:
             history = History.objects.get(project_id=project_id, checksum=checksum)
