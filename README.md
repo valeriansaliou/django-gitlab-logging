@@ -1,6 +1,8 @@
 Django GitLab Logging
 =====================
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/valeriansaliou/django-gitlab-logging?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Django GitLab Logging is a custom log handler that has been written with the purpose of auto-opening (and assigning) issues on GitLab everytime something goes south with backend code.
 
 Useful for production deployments, where you want to move the flood of 500 errors you get in your mailbox to your GitLab issue tracker.
