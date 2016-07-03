@@ -61,6 +61,4 @@ LOGGING['loggers'] = {
 
 * This module is kept up-to-date with latest GitLab API changes. Thus, ensure you're running the latest GitLab version in time when using Django GitLab Logging!
 
-* Django GitLab Logging has been built by the happy folks at [Waaave Network](https://waaave.com/), for their website needs.
-
-* You may want to read the following tutorial about Django GitLab Logging: [Automatically open GitLab issues for Django errors](https://waaave.com/tutorial/django/automatically-open-gitlab-issues-for-django-errors/)
+* Django GitLab Logging has been built by the happy folks at [Waaave](https://github.com/waaave/waaave-web).
